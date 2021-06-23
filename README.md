@@ -28,8 +28,15 @@ Project token example
         "project-token": "#########",
     }
 
+### Tool
+Codacy cli can use all tool availables for the repository or you can specify one using the key "tool"
+
+    "codacy-cli": {
+        "tool": "eslint"    
+    }
+
 ### On-prem usage
-In order to use it for servers on-prem, you'll need to use the flag "codacy-api-base-url"
+In order to use it for servers on-prem, you'll need to use the key "codacy-api-base-url"
 
     "codacy-cli": {
         "codacy-api-base-url": "https://my-onprem.codacy.instance",
