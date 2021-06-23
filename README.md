@@ -21,6 +21,7 @@ Codacy CLI tool depends on Docker
 Codacy CLI extension can be configure to both work with Project token or API Token
 
 API token example:
+
     "codacy-cli": {
         "api-token":"##########",
         "provider":"gh|ge|gl",
@@ -31,11 +32,12 @@ API token example:
 Project token example
 
     "codacy-cli": {
-        "project-token": "YAY",
+        "project-token": "#########",
     }
 
 ### On-prem usage
 In order to use it for servers on-prem, you'll need to use the flag "codacy-api-base-url"
+
     "codacy-cli": {
         "codacy-api-base-url": "https://my-onprem.codacy.instance",
     }
