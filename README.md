@@ -7,6 +7,10 @@ An extension to see Codacy results on VSCode
 
 Codacy CLI tool depends on Docker
 
+## Run the plugin
+
+Open Command Palette and type "Run Codacy CLI"
+
 ## Extension Settings
 
 Settings are configured on ".vscode/settings.json" under "codacy-cli".
