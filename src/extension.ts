@@ -37,6 +37,10 @@ export function activate(context: vscode.ExtensionContext) {
 				additionalParameters.push(`--tool ${configuration.get('tool')}`);
 			}
 
+			if (configuration.has('ssl-verification') && configuration.get('ssl-verification') === 'true') {
+				additionalParameters.push('--skip-ssl-verification');
+			}
+
 			for (let i = 0; i < vscode.workspace.workspaceFolders.length; i++) {
 				let workspaceFolder = vscode.workspace.workspaceFolders[i].uri.path;
 				env.env['CODACY_CODE'] = workspaceFolder;

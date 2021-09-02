@@ -32,6 +32,11 @@ Project token example
         "project-token": "#########",
     }
 
+Skip SSL Verification
+    "codacy-cli": {
+        "ssl-verification": "true",
+    }
+
 ### Tool
 Codacy cli can use all tool availables for the repository or you can specify one using the key "tool"
 
