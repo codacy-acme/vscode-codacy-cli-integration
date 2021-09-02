@@ -7,6 +7,10 @@ An extension to see Codacy results on VSCode
 
 Codacy CLI tool depends on Docker
 
+## Install the plugin
+
+Download the vsix from [here](https://github.com/codacy-acme/vscode-codacy-cli-integration/releases)
+
 ## Run the plugin
 
 Open Command Palette and type "Run Codacy CLI"
@@ -52,3 +56,9 @@ In order to use it for servers on-prem, you'll need to use the key "codacy-api-b
     }
 
 **Enjoy!**
+
+# Development
+
+## Package
+    npm install -g vsc
+    vsce package
