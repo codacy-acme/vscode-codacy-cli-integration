@@ -43,7 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 			for (let i = 0; i < vscode.workspace.workspaceFolders.length; i++) {
 				let workspaceFolder = vscode.workspace.workspaceFolders[i].uri.path;
-				workspaceFolder += workspaceFolder.slice(-1) === '/' ? '' : '/' //Ensure that there is a trailing slash on Macs. Should probably pull into a separate method and test
+				workspaceFolder += workspaceFolder.slice(-1) === '/' ? '' : '/'; //Ensure that there is a trailing slash on Macs. Should probably pull into a separate method and test
 
 				env.env['CODACY_CODE'] = workspaceFolder;
 				const dockerCommand = `docker run --rm=true --env CODACY_CODE="$CODACY_CODE" 	--volume /var/run/docker.sock:/var/run/docker.sock --volume "$CODACY_CODE":"$CODACY_CODE" --volume /tmp:/tmp codacy/codacy-analysis-cli analyze --format sarif ${additionalParameters.join(' ')}`;
